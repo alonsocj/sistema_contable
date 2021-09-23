@@ -13,8 +13,8 @@ const router = Router();
 /**
  * @swagger
  * tags:
- *  name: Cuentas
- *  description: Cuentas endpoint
+ *  name: Clase
+ *  description: Clases endpoint
  */
 
 /**
@@ -22,7 +22,7 @@ const router = Router();
  *  /clase:
  *    get: 
  *      summary: Obtiene todas las Cuentas
- *      tags: [Cuentas]
+ *      tags: [Clase]
  */
 
 
@@ -33,7 +33,7 @@ router.get("/clase", getClases);
  *  /clase/count:
  *    get: 
  *      summary: Obtiene el numero total de cuentas creadas
- *      tags: [Cuentas]
+ *      tags: [Clase]
  */
 
 router.get("/clase/count", getClaseCount);
@@ -43,7 +43,7 @@ router.get("/clase/count", getClaseCount);
  *  /clase:NUMCUEN:
  *    get: 
  *      summary: Obtiene una cuenta en especifico debido a su numero de cuenta
- *      tags: [Cuentas]
+ *      tags: [Clase]
  */
 
 router.get("/clase/:NUMCUEN", getClase);
@@ -53,7 +53,7 @@ router.get("/clase/:NUMCUEN", getClase);
  *  /clase:
  *    post: 
  *      summary: Crea una cuenta
- *      tags: [Cuentas]
+ *      tags: [Clase]
  */
 
 router.post("/clase", saveClase);
@@ -63,7 +63,7 @@ router.post("/clase", saveClase);
  *  /clase/:NUMCUEN:
  *    delete: 
  *      summary: Elimina una clase de cuenta debido a su numero de cuenta 
- *      tags: [Cuentas]
+ *      tags: [Clase]
  */
 
 router.delete("/clase/:NUMCUEN", deleteClase);
@@ -73,7 +73,7 @@ router.delete("/clase/:NUMCUEN", deleteClase);
  *  /clase/:NUMCUEN:
  *    put: 
  *      summary: Actualiza una cuenta debido a su numero de cuenta
- *      tags: [Cuentas]
+ *      tags: [Clase]
  */
 
 router.put("/clase/:NUMCUEN", updateClase);
