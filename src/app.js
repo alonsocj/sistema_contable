@@ -10,6 +10,7 @@ const specs = swaggerJSDoc(options);
 
 import claseRoutes from "./routes/clase-cuenta";
 import grupoRoutes from "./routes/grupo-cuenta";
+import cuentaRoutes from "./routes/cuenta";
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.use(express.json());
 
 app.use(claseRoutes);
 app.use(grupoRoutes);
+app.use(cuentaRoutes);
 
 app.use("/docs", swaggerUi.serve, swaggerUi.setup(specs));
 export default app;

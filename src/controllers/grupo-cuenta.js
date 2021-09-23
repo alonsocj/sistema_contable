@@ -19,7 +19,10 @@ export const getGrupo = async (req, res) => {
 
 export const getGrupoCount = async (req, res) => {
   const connection = await connect();
-  const [rows] = await connection.query("SELECT COUNT(*) FROM GRUPOCUENTA");
+  const [rows] = await connection.query(
+    "SELECT COUNT(*) FROM GRUPOCUENTA WHERE NUMCUEN = ?",
+    [req.params.NUMCUEN]
+  );
   res.json(rows[0]["COUNT(*)"]);
 };
 
