@@ -4,9 +4,9 @@ import morgan from "morgan";
 
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
-//import { options } from "./swaggerOptions";
+import { options } from "./swaggerOptions";
 
-//const specs = swaggerJSDoc(options);
+const specs = swaggerJSDoc(options);
 
 import claseRoutes from "./routes/clase-cuenta";
 
@@ -18,5 +18,5 @@ app.use(express.json());
 
 app.use(claseRoutes);
 
-//app.use("/docs", swaggerUi.serve, swaggerUi.setup(specs));
+app.use("/docs", swaggerUi.serve, swaggerUi.setup(specs));
 export default app;
